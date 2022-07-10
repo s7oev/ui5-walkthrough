@@ -16,7 +16,6 @@ sap.ui.define([
         },
 
         onOpenDialog: function () {
-            // note that the video is outdated
             if (!this.pDialog) {
                 this.pDialog = this.loadFragment({
                     name: "sap.ui.demo.walkthrough.view.HelloDialog"
@@ -26,6 +25,13 @@ sap.ui.define([
             this.pDialog.then(function (oDialog) {
                 oDialog.open();
             });
+        },
+
+        onCloseDialog: function () {
+            // no need to chain to the pDialog promise, because
+            // this event handler can only be called from within
+            // the loaded dialog
+            this.byId("helloDialog").close();
         }
     });
 });
