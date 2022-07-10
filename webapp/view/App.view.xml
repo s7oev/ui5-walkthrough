@@ -4,7 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc">
     <!-- Button and Input are available from the sap.m library -->
     <Button
-        text="Say Hi"
+        text="{i18n>showHelloButtonText}"
         press=".onShowHello" />
     <Input
         value="{/recipient/name}"
