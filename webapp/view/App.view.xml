@@ -2,16 +2,16 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     <Shell>
-        <App class="myAppDemoWT">
+        <App>
             <pages>
                 <Page title="{i18n>homePageTitle}">
                     <content>
                         <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
                             <content>
                                 <!-- Button and Input are available from the sap.m library -->
-                                <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="myCustomButton" />
+                                <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd" />
                                 <Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%" />
-                                <FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" />
+                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin" />
                             </content>
                         </Panel>
                     </content>
