@@ -16,22 +16,14 @@ sap.ui.define([
         },
 
         onOpenDialog: function () {
-            if (!this.pDialog) {
-                this.pDialog = this.loadFragment({
-                    name: "sap.ui.demo.walkthrough.view.HelloDialog"
-                });
-            }
-
-            this.pDialog.then(function (oDialog) {
-                oDialog.open();
-            });
+            this.getOwnerComponent().openHelloDialog();
         },
 
-        onCloseDialog: function () {
-            // no need to chain to the pDialog promise, because
-            // this event handler can only be called from within
-            // the loaded dialog
-            this.byId("helloDialog").close();
-        }
+        // onCloseDialog: function () {
+        //     // no need to chain to the pDialog promise, because
+        //     // this event handler can only be called from within
+        //     // the loaded dialog
+        //     this.byId("helloDialog").close();
+        // }
     });
 });
