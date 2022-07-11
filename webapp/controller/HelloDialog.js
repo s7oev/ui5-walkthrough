@@ -15,20 +15,9 @@ sap.ui.define([
 
         open: function () {
             const oView = this._oView;
+
             if (!oView.byId("helloDialog")) {
                 const oFragmentController = {
-                    onOpenDialog: function () {
-                        if (!oView.pDialog) {
-                            oView.pDialog = oView.loadFragment({
-                                name: "sap.ui.demo.walkthrough.view.HelloDialog"
-                            });
-                        }
-
-                        oView.pDialog.then(function (oDialog) {
-                            oDialog.open();
-                        });
-                    },
-
                     onCloseDialog: function () {
                         // no need to chain to the pDialog promise, because
                         // this event handler can only be called from within

@@ -17,13 +17,6 @@ sap.ui.define([
 
         onOpenDialog: function () {
             this.getOwnerComponent().openHelloDialog();
-        },
-
-        // onCloseDialog: function () {
-        //     // no need to chain to the pDialog promise, because
-        //     // this event handler can only be called from within
-        //     // the loaded dialog
-        //     this.byId("helloDialog").close();
-        // }
+        }
     });
 });
