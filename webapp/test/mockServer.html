@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- loading and initializing SAP UI5 resources (bootstrapping).
+         notice data-sap-ui-resourceroots - this is what is setting
+         the current folder to be the folder for sap.ui.demo.walkthrough
+
+         also - onInit - loads the index.js file
+    -->
+    <script id="sap-ui-bootstrap" src="https://sdk.openui5.org/resources/sap-ui-core.js" data-sap-ui-theme="sap_horizon"
+        data-sap-ui-libs="sap.m" data-sap-ui-compatVersion="edge" data-sap-ui-async="true"
+        data-sap-ui-onInit="module:sap/ui/demo/walkthrough/test/initMockServer" data-sap-ui-resourceroots='{
+            "sap.ui.demo.walkthrough": "../" 
+    }'>
+
+    </script>
+    <meta charset="utf-8">
+    <title>SAPUI5 Walkthrough - Test Page</title>
+</head>
+
+<body class="sapUiBody" id="content">
+    <div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container"
+        data-settings='{"id": "walkthrough"}'>
+    </div>
+</body>
+
+</html>
