@@ -1,14 +1,20 @@
 <mvc:View controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
-    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
-    <headerToolbar>
-        <Toolbar>
-            <Title text="{i18n>invoiceListTitle}" />
-            <ToolbarSpacer />
-            <SearchField width="50%" search=".onFilterInvoices" />
-        </Toolbar>
-    </headerToolbar>
+    <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" items="{
+            path: 'invoice>/Invoices',
+            sorter: {
+                path: 'ShipperName',
+                group: true
+            }
+        }">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer />
+                <SearchField width="50%" search=".onFilterInvoices" />
+            </Toolbar>
+        </headerToolbar>
         <items>
             <!-- if the opening JSON bracket is not immediately after the ", everything breaks :D -->
             <ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}" number="{
